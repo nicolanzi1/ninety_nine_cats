@@ -9,7 +9,7 @@ class UsersController < ApplicationController
             email.deliver
             redirect_to cats_url
         else
-            flash.now[:errors] = @users.errors.full_messages
+            flash.now[:errors] = @user.errors.full_messages
             render :new
         end
     end
